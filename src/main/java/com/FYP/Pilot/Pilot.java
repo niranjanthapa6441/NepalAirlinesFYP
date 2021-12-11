@@ -30,7 +30,7 @@ public class Pilot {
     @Column(name ="ICAO_License_Number",nullable = false,unique = true)
     private String ICAONumber;
     @Column(name ="CIAA_License_Number",nullable = false,unique = true)
-    private String CIAANumber;
+    private String CAANNumber;
     @Column(name = "status")
     private String status;
 }

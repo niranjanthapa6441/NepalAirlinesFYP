@@ -65,7 +65,7 @@ public class PilotServiceImpl implements PilotService {
         pilot.setLastName(request.getLastName());
         pilot.setMiddleName(request.getMiddleName());
         pilot.setEmail(request.getEmail());
-        pilot.setCIAANumber(request.getCIAANumber());
+        pilot.setCAANNumber(request.getCAANNumber());
         pilot.setICAONumber(request.getICAONumber());
         pilot.setStatus(request.getStatus());
         pilot.setPhoneNumber(request.getPhoneNumber());
@@ -75,7 +75,7 @@ public class PilotServiceImpl implements PilotService {
     private PilotDTO toPilotDTO(Pilot pilot) {
         return PilotDTO.builder().
                 id(pilot.getId()).
-                CIAANumber(pilot.getCIAANumber()).
+                CAANNumber(pilot.getCAANNumber()).
                 firstName(pilot.getFirstName()).
                 lastName(pilot.getLastName()).
                 middleName(pilot.getMiddleName()).

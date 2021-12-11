@@ -12,7 +12,7 @@ public class PilotDTO {
     private String middleName;
     private String phoneNumber;
     private String ICAONumber;
-    private String CIAANumber;
+    private String CAANNumber;
     private String email;
     private String status;
 }

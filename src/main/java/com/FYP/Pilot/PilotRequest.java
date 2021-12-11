@@ -12,6 +12,6 @@ public class PilotRequest {
     private String phoneNumber;
     private String email;
     private String ICAONumber;
-    private String CIAANumber;
+    private String CAANNumber;
     private String status;
 }
