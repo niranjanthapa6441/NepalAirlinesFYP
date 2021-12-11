@@ -12,5 +12,9 @@ import javax.validation.Valid;
 @Entity
 @Table(name = "BUDDHA_AIRCRAFT")
 public class Aircraft {
-
+    private String id;
+    private String name;
+    private String aircraftCode;
+    private int numberOfSeats;
+    private String status;
 }
