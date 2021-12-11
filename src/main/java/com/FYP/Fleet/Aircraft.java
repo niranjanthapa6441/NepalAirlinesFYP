@@ -1,20 +1,25 @@
 package com.FYP.Fleet;
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.Valid;
 
 @Data
 @Entity
-@Table(name = "BUDDHA_AIRCRAFT")
+@Table(name = "aircraft")
 public class Aircraft {
+    @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String id;
+    @Column(name = "aircraft_name")
     private String name;
+    @Column(name = "aircraft_code")
     private String aircraftCode;
+    @Column(name = "number_of_seats")
     private int numberOfSeats;
+    @Column(name = "status")
     private String status;
 }
