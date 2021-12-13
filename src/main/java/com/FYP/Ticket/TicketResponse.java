@@ -1,4 +1,4 @@
-package com.FYP.Flight.Ticket;
+package com.FYP.Ticket;
 
 public class TicketResponse {
 }

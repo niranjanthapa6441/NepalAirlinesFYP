@@ -1,4 +1,4 @@
-package com.FYP.Flight.Ticket;
+package com.FYP.Ticket;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
