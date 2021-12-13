@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>FYP</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FYP</name>
+	<name>com.FYP</name>
 	<packaging>jar</packaging>
 	<description>Final Year Project</description>
 	<properties>
