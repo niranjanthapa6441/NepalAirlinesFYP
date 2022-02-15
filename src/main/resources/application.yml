@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/buddhaair
+    url: jdbc:postgresql://localhost:5432/nepalairlines
     username: postgres
     password: 6441
   jpa:
@@ -13,5 +13,5 @@ spring:
     show-sql: true
 server:
   servlet:
-    context-path: /buddhaair/api/v1
-  port: 8081
+    context-path: /nepalairlines/api/v1
+  port: 8082
