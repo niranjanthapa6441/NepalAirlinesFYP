@@ -1,0 +1,19 @@
+package com.FYP.FlightDetail.FlightTicket;
+
+import com.FYP.FlightDetail.Flight.FlightDetail;
+import com.FYP.FlightDetail.Ticket.Ticket;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface FlightTicketRepo extends JpaRepository<FlightTicket,String> {
+    @Query("SELECT flt FROM FlightTicket flt where flt.detail=?1 and flt.ticket=?2")
+    FlightTicket findFlightTicket(FlightDetail detail, Ticket ticket);
+
+    @Query("SELECT flt.ticket FROM FlightTicket flt where flt.detail=?1 ORDER BY flt.ticket.price")
+    List<Ticket> findFlightTicketByFlight(FlightDetail detail);
+}
