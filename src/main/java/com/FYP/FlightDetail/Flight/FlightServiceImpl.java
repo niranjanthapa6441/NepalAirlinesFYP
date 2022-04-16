@@ -116,10 +116,10 @@ public class FlightServiceImpl implements FlightService {
     }
     private SearchFlightDTO toSearchFlightDTO(FlightDetail detail, Ticket ticket) {
         SearchFlightDTO searchFlightDTO = new SearchFlightDTO();
-        searchFlightDTO.setFlightCode(detail.getFlightCode());
+        searchFlightDTO.setFlight_code(detail.getFlightCode());
         searchFlightDTO.setSector(detail.getSector());
-        searchFlightDTO.setDepartureDate(String.valueOf(detail.getDepartureDate()));
-        searchFlightDTO.setDepartureTime(String.valueOf(detail.getDepartureTime()));
+        searchFlightDTO.setDeparture_date(String.valueOf(detail.getDepartureDate()));
+        searchFlightDTO.setDeparture_time(String.valueOf(detail.getDepartureTime()));
         searchFlightDTO.setStatus(detail.getStatus());
         searchFlightDTO.setTicket(ticket);
         return searchFlightDTO;
@@ -127,10 +127,10 @@ public class FlightServiceImpl implements FlightService {
 
     private SearchFlightDTO getSearchFlightDTO(FlightDetail detail, Ticket flightTicket) {
         SearchFlightDTO searchFlightDTO= new SearchFlightDTO();
-        searchFlightDTO.setFlightCode(detail.getFlightCode());
+        searchFlightDTO.setFlight_code(detail.getFlightCode());
         searchFlightDTO.setSector(detail.getSector());
-        searchFlightDTO.setDepartureDate(String.valueOf(detail.getDepartureDate()));
-        searchFlightDTO.setDepartureTime(String.valueOf(detail.getDepartureTime()));
+        searchFlightDTO.setDeparture_time(String.valueOf(detail.getDepartureDate()));
+        searchFlightDTO.setDeparture_time(String.valueOf(detail.getDepartureTime()));
         searchFlightDTO.setStatus(detail.getStatus());
         searchFlightDTO.setTicket(flightTicket);
         return searchFlightDTO;
@@ -143,7 +143,7 @@ public class FlightServiceImpl implements FlightService {
         if (searchFlightDTOS != null) {
             for (int i = 0; i < n; i++) {
                 for (int j = 1; j < (n - i); j++) {
-                    if (array[j - 1].getTicket().getPrice() > array[j].getTicket().getPrice()) {
+                    if (array[j - 1].getTicket().getTicket_price() > array[j].getTicket().getTicket_price()) {
                         temp = array[j - 1];
                         array[j - 1]=array[j];
                         array[j]=temp;
@@ -197,7 +197,7 @@ public class FlightServiceImpl implements FlightService {
     private List<FlightDetail> toSearchFlight(Sector sector, LocalDate date) {
         List<FlightDetail> flightDetails=flightRepo.findFlightBySectorAndDate(sector, date);
         if (flightDetails==null)
-            throw new NullPointerException("The Flights are Not Present for departure date: "+date +"\n"+"sector: "+sector.getSectorCode());
+            throw new NullPointerException("The Flights are Not Present for departure date: "+date +"\n"+"sector: "+sector.getSector_code());
         return flightDetails;
     }
 

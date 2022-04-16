@@ -20,9 +20,9 @@ public class Ticket {
     )
     private int id;
     @Column(name = "ticket_code",nullable = false,unique = true)
-    private String ticketCode;
+    private String ticket_code;
     @Column(nullable = false)
-    private int price;
+    private int ticket_price;
     @Column(nullable = false)
     private String Status;
 }

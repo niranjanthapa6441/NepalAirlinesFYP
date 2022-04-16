@@ -67,20 +67,20 @@ public class SectorServiceImpl implements SectorService{
     private SectorDTO toSectorDTO(Sector sector) {
         return SectorDTO.builder()
                 .id(sector.getId())
-                .sectorCode(sector.getSectorCode())
+                .sectorCode(sector.getSector_code())
                 .duration(sector.getDuration())
-                .from(sector.getFrom())
-                .to(sector.getTo())
+                .from(sector.getDeparture())
+                .to(sector.getArrival())
                 .status(sector.getStatus())
                 .build();
     }
 
     private Sector toSector(SectorRequest request) {
         Sector sector= new Sector();
-        sector.setSectorCode(request.getSectorCode());
+        sector.setSector_code(request.getSectorCode());
         sector.setDuration(request.getDuration());
-        sector.setFrom(request.getFrom());
-        sector.setTo(request.getTo());
+        sector.setDeparture(request.getFrom());
+        sector.setId(request.getTo());
         sector.setStatus(request.getStatus());
         return sector;
     }

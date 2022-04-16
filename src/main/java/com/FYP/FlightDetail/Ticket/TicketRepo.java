@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TicketRepo extends JpaRepository<Ticket,Integer> {
-    @Query("SELECT tkt FROM Ticket tkt where tkt.ticketCode=?1")
+    @Query("SELECT tkt FROM Ticket tkt where tkt.ticket_code=?1")
     Ticket findByTicketCode(String ticketCode);
 }

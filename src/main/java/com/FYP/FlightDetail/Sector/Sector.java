@@ -15,11 +15,11 @@ public class Sector {
     @Column(name="sector_id")
     private String id;
     @Column(name = "sector_code",nullable = false,unique = true)
-    private String sectorCode;
+    private String sector_code;
     @Column(name="take_off_from",nullable = false)
-    private String from;
+    private String arrival;
     @Column(name="landing_to",nullable = false)
-    private String to;
+    private String departure;
     @Column(nullable = false)
     private String duration;
     @Column(nullable = false)

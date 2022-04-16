@@ -66,14 +66,14 @@ public class TicketServiceImpl implements  TicketService{
     }
     private Ticket toTicket(TicketRequest request) {
         ticket= new Ticket();
-        ticket.setTicketCode(request.getTicketCode());
-        ticket.setPrice(request.getPrice());
+        ticket.setTicket_code(request.getTicketCode());
+        ticket.setTicket_price(request.getPrice());
         ticket.setStatus(request.getStatus());
         return  ticket;
     }
     private TicketDTO toTicketDTO(Ticket ticket) {
         return TicketDTO.builder().id(ticket.getId()).
-                price(ticket.getPrice()).Status(ticket.getStatus()).ticketCode(ticket.getTicketCode()).
+                price(ticket.getTicket_price()).Status(ticket.getStatus()).ticketCode(ticket.getTicket_code()).
                 build();
     }
     private void checkValidation(TicketRequest request) {
